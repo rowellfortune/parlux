@@ -1,11 +1,7 @@
 import Image from "next/image";
-
-// Contact details copied from the live site. Phone and WhatsApp use the same number.
-const PHONE_DISPLAY = "+597 844 1775";
-const PHONE_LINK = "tel:+5978441775";
-const WHATSAPP_LINK = "https://wa.me/5978441775";
-const FACEBOOK_LINK = "https://www.facebook.com/profile.php?id=61575335341424";
-const INSTAGRAM_LINK = "https://www.instagram.com/parlux.sr";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import { PHONE_DISPLAY, PHONE_LINK, WHATSAPP_LINK } from "@/lib/contact";
 
 // Product cards shown in the "Our products" section.
 const PRODUCTS = [
@@ -48,30 +44,6 @@ export default function Home() {
 
       <SiteFooter />
     </>
-  );
-}
-
-// Sticky top bar with the logo, section links, and a phone button.
-function SiteHeader() {
-  return (
-    <header className="site-header">
-      <div className="container">
-        <a href="/" className="brand" aria-label="Parlux Persian Imports home">
-          <Image src="/images/logo.png" alt="Parlux, Essence of Persia" width={507} height={436} priority />
-        </a>
-
-        <nav className="nav" aria-label="Main">
-          <a href="/">Home</a>
-          <a href="#products">Products</a>
-          <a href="#about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
-
-        <a className="button button-primary" href={WHATSAPP_LINK}>
-          WhatsApp us
-        </a>
-      </div>
-    </header>
   );
 }
 
@@ -216,33 +188,5 @@ function ClosingCta() {
         </div>
       </div>
     </section>
-  );
-}
-
-// Footer: brand line, phone, and social links.
-function SiteFooter() {
-  return (
-    <footer className="site-footer">
-      <div className="container">
-        <p style={{ margin: 0 }}>&copy; 2025 Parlux Persian Imports</p>
-        <ul>
-          <li>
-            <a href={PHONE_LINK}>{PHONE_DISPLAY}</a>
-          </li>
-          <li>
-            <a href={WHATSAPP_LINK}>WhatsApp</a>
-          </li>
-          <li>
-            <a href={FACEBOOK_LINK}>Facebook</a>
-          </li>
-          <li>
-            <a href={INSTAGRAM_LINK}>Instagram</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
   );
 }

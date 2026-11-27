@@ -366,6 +366,130 @@ a {
   color: var(--color-red);
 }
 
+/* Contact page: text column and form card side by side on desktop. */
+.contact-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.1fr;
+    align-items: start;
+  }
+}
+
+.contact-list {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--color-gold);
+  background: var(--color-paper);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.contact-list span {
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-list a {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-red-deep);
+  text-decoration: none;
+}
+
+.contact-card {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--color-paper);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+}
+
+.contact-card h2 {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--color-red-deep);
+}
+
+/* Enquiry form: fields stack on mobile and sit in two columns on wider screens. */
+.contact-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1.1rem;
+}
+
+@media (min-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-form label > span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: 10px;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .button {
+  justify-self: start;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
 /* Respect users who ask for less motion. */
 @media (prefers-reduced-motion: reduce) {
   html {
