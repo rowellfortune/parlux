@@ -67,6 +67,11 @@ a {
   text-transform: uppercase;
 }
 
+/* Inside .prose, the generic paragraph color would win over .eyebrow. This keeps labels gold. */
+.prose .eyebrow {
+  color: var(--color-gold-text);
+}
+
 .display {
   margin: 0 0 1rem;
   font-family: var(--font-display);
