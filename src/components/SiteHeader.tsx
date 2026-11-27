@@ -13,7 +13,6 @@ export default function SiteHeader() {
 
         <nav className="nav" aria-label="Main">
           <a href="/saffron-shop">Shop</a>
-          <a href="/#products">Products</a>
           <a href="/#about">About</a>
           <a href="/tea-infusion">Tea</a>
           <a href="/contact">Contact</a>
