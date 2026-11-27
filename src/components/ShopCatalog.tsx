@@ -40,7 +40,9 @@ function ProductGrid() {
           </figure>
           <div className="product-card-body">
             {product.badge && <span className="badge">{product.badge}</span>}
-            <h2>{product.name}</h2>
+            <h2>
+              <a href={`/saffron-shop/${product.slug}`}>{product.name}</a>
+            </h2>
             <p>{product.summary}</p>
             <div className="product-card-footer">
               <span className="price">{formatPrice(product)}</span>

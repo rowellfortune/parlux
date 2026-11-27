@@ -666,6 +666,74 @@ a {
   cursor: pointer;
 }
 
+/* Product detail page: photo and details side by side on desktop. */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--color-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.product-detail {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 860px) {
+  .product-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-detail-media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-gold-soft);
+}
+
+.product-detail-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-detail-body {
+  display: grid;
+  gap: 1.1rem;
+  align-content: start;
+}
+
+.product-detail-body .display {
+  margin: 0;
+}
+
+.price-large {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.add-to-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Keep product names in cards readable as links. */
+.product-card-body h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-body h2 a:hover {
+  color: var(--color-red);
+}
+
 /* Respect users who ask for less motion. */
 @media (prefers-reduced-motion: reduce) {
   html {
